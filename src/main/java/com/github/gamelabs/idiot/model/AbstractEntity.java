@@ -9,4 +9,11 @@ import javax.persistence.MappedSuperclass;
 public abstract class AbstractEntity {
 	@Id
 	UUID uuid;
+
+	@Override
+	public abstract String toString();
+	@Override
+	public abstract boolean equals(Object obj);
+	@Override
+	public abstract int hashCode();
 }
