@@ -3,11 +3,11 @@
 --
 
 CREATE TABLE IF NOT EXISTS `game` (
-  `game_nr` int(11) NOT NULL,
-  `game_type` smallint(11) NOT NULL,
+  `game_nr` integer NOT NULL,
+  `game_type` integer NOT NULL,
   `player_name` varchar(256) NOT NULL,
-  `time_played` int(11) DEFAULT NULL,
-  `score` int(11) DEFAULT NULL
+  `time_played` integer DEFAULT NULL,
+  `score` integer DEFAULT NULL
 );
 
 --
@@ -15,11 +15,11 @@ CREATE TABLE IF NOT EXISTS `game` (
 --
 
 CREATE TABLE IF NOT EXISTS `game_puzzle` (
-  `game_nr` int(11) NOT NULL,
+  `game_nr` integer NOT NULL,
   `puzzle_name` varchar(256) NOT NULL,
-  `played` tinyint(1) DEFAULT NULL,
-  `won` tinyint(1) DEFAULT NULL,
-  `time_score` int(11) DEFAULT NULL
+  `played` boolean DEFAULT NULL,
+  `won` boolean DEFAULT NULL,
+  `time_score` integer DEFAULT NULL
 );
 
 --
@@ -27,9 +27,9 @@ CREATE TABLE IF NOT EXISTS `game_puzzle` (
 --
 
 CREATE TABLE IF NOT EXISTS `game_types` (
-  `type` smallint(6) NOT NULL,
+  `type` integer NOT NULL,
   `name` varchar(256) NOT NULL,
-  `description` varchar(1024) NOT NULL
+  `description` varchar(256) NOT NULL
 );
 
 --
@@ -37,8 +37,8 @@ CREATE TABLE IF NOT EXISTS `game_types` (
 --
 
 CREATE TABLE IF NOT EXISTS `player` (
-  `identification_hash` varchar(1024) NOT NULL,
-  `identification_type` smallint(6) NOT NULL,
+  `identification_hash` varchar(256) NOT NULL,
+  `identification_type` integer NOT NULL,
   `player_name` varchar(256) NOT NULL,
   `join_date` date NOT NULL
 );
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `player` (
 
 CREATE TABLE IF NOT EXISTS `puzzle` (
   `name` varchar(256) NOT NULL,
-  `location` varchar(1024) NOT NULL
+  `location` varchar(256) NOT NULL
 );
 
 --
@@ -58,8 +58,8 @@ CREATE TABLE IF NOT EXISTS `puzzle` (
 
 CREATE TABLE IF NOT EXISTS `rank` (
   `puzzle_name` varchar(256) NOT NULL,
-  `game_type` smallint(6) NOT NULL,
-  `rank_score` int(11) NOT NULL
+  `game_type` integer NOT NULL,
+  `rank_score` integer NOT NULL
 );
 
 --
