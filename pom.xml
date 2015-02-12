@@ -75,6 +75,13 @@
 			<artifactId>lombok</artifactId>
 			<version>1.14.8</version>
 		</dependency>
+		<!-- Generate a graph of the database tables -->
+		<dependency>
+			<groupId>net.sourceforge.schemaspy</groupId>
+			<artifactId>schemaspy</artifactId>
+			<version>5.0.0</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
