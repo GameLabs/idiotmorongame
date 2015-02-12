@@ -1,12 +1,15 @@
 package com.github.gamelabs.idiot.model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.Data;
 
-import com.github.gamelabs.idiot.enums.GameType;
 import com.github.gamelabs.idiot.enums.IdType;
 
 @Entity
@@ -18,5 +21,9 @@ public class Player extends AbstractEntity {
 
 	String name;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	Date joined = new Date();
+	
+	@OneToMany(mappedBy="player")
+	List<Game> games;
 }
