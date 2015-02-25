@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>game 1</title>
+	</head>
+	<body><h1>Welcome Idiots!</h1>
+	
+
+	<h2>click a number closest to your own IQ? (just click some number if you don't know what IQ stands for)</h2>
+		<div>
+			<div>
+				<form method="get" action="#">
+    				<button type="submit">24</button>
+				</form>
+			</div>
+		
+			<div>
+				<form method="get" action="#">
+    				<button type="submit">80</button>
+				</form>
+			</div>
+
+			<div><form method="get" action="#">
+    				<button type="submit">156</button>
+				</form>
+			</div>
+
+		</div>
+		
+	</body>
+</html>
